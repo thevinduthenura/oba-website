@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import OfficeBearerCard from "@/components/committee/OfficeBearerCard";
+import type { Member } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Office Bearers",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function OfficeBearersPage() {
-  let members = [];
+  let members: Member[] = [];
   try {
     members = await api.getMembers("OFFICE_BEARER");
   } catch {

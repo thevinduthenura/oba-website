@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import NewsCard from "@/components/news/NewsCard";
+import type { NewsPost } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "News & Updates",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function NewsPage() {
-  let posts = [];
+  let posts: NewsPost[] = [];
   try { posts = await api.getNews(); } catch { /* empty */ }
 
   return (

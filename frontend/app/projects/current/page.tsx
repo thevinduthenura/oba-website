@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import ProjectCard from "@/components/projects/ProjectCard";
+import type { Project } from "@/lib/types";
 
 export const metadata: Metadata = { title: "Current Projects" };
 
 export default async function CurrentProjectsPage() {
-  let projects = [];
+  let projects: Project[] = [];
   try { projects = await api.getProjects("CURRENT"); } catch { /* empty */ }
 
   return (

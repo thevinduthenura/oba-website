@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import MemberTable from "@/components/committee/MemberTable";
+import type { Member } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Member Directory",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function MembersPage() {
-  let members = [];
+  let members: Member[] = [];
   try {
     members = await api.getMembers("MEMBER");
   } catch {

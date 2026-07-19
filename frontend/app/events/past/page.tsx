@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import EventCard from "@/components/events/EventCard";
+import type { Event } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Past Events",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function PastEventsPage() {
-  let events = [];
+  let events: Event[] = [];
   try {
     events = await api.getEvents("PAST");
   } catch { /* empty */ }

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { api } from "@/lib/api";
 import GalleryGrid from "@/components/events/GalleryGrid";
+import type { GalleryImage } from "@/lib/types";
 
 export const metadata: Metadata = {
   title: "Photo Gallery",
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
 };
 
 export default async function GalleryPage() {
-  let images = [];
+  let images: GalleryImage[] = [];
   try {
     images = await api.getGallery();
   } catch { /* empty */ }
