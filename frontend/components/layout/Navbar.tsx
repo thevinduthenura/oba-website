@@ -354,12 +354,12 @@ export default function Navbar() {
           <div style={{ height: "1px", background: "linear-gradient(90deg, var(--gold), transparent)", marginBottom: "1.5rem", opacity: 0.5 }} />
 
           {NAV_LINKS.map((link) => (
-            <div key={link.href} style={{ marginBottom: "0.35rem" }}>
+            <div key={link.href} style={{ marginBottom: "0.2rem" }}>
               <Link
                 href={link.href}
                 style={{
                   display: "block",
-                  padding: "0.8rem 1rem",
+                  padding: "0.9rem 1rem",
                   color: isActive(link.href) ? "var(--gold)" : "var(--text-primary)",
                   textDecoration: "none",
                   fontSize: "1rem",
@@ -368,27 +368,37 @@ export default function Navbar() {
                   background: isActive(link.href) ? "rgba(212,175,55,0.08)" : "transparent",
                   borderLeft: isActive(link.href) ? "3px solid var(--gold)" : "3px solid transparent",
                   transition: "all 0.2s",
-                }}
+                  minHeight: "48px",
+                  touchAction: "manipulation",
+                  WebkitTapHighlightColor: "transparent",
+                } as React.CSSProperties}
               >
                 {link.label}
               </Link>
               {hasChildren(link) && (
-                <div style={{ paddingLeft: "1.25rem", marginTop: "0.2rem" }}>
+                <div style={{ paddingLeft: "1.25rem", marginTop: "0.1rem", marginBottom: "0.25rem" }}>
                   {link.children.map((child) => (
                     <Link
                       key={child.href}
                       href={child.href}
                       style={{
-                        display: "block",
-                        padding: "0.5rem 1rem",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "0.4rem",
+                        padding: "0.6rem 1rem",
                         color: isActive(child.href) ? "var(--gold-light)" : "var(--text-muted)",
                         textDecoration: "none",
-                        fontSize: "0.875rem",
+                        fontSize: "0.9rem",
                         fontWeight: 500,
                         borderRadius: "0.5rem",
-                      }}
+                        background: isActive(child.href) ? "rgba(212,175,55,0.06)" : "transparent",
+                        minHeight: "44px",
+                        touchAction: "manipulation",
+                        WebkitTapHighlightColor: "transparent",
+                      } as React.CSSProperties}
                     >
-                      → {child.label}
+                      <span style={{ opacity: 0.5, fontSize: "0.75rem" }}>›</span>
+                      {child.label}
                     </Link>
                   ))}
                 </div>

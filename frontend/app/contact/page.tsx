@@ -43,9 +43,10 @@ export default function ContactPage() {
     border: "1px solid var(--border)",
     borderRadius: "var(--radius)",
     color: "var(--text-primary)",
-    fontSize: "0.95rem",
+    fontSize: "1rem",
     outline: "none",
     transition: "border-color 0.2s",
+    fontFamily: "inherit",
   };
 
   return (
@@ -217,9 +218,14 @@ export default function ContactPage() {
         </div>
       </section>
       <style>{`
-        @media(max-width:768px){
-          .contact-grid { grid-template-columns: 1fr !important; }
+        @media(max-width: 768px) {
+          .contact-grid { grid-template-columns: 1fr !important; gap: 1.5rem !important; }
           .form-row { grid-template-columns: 1fr !important; }
+          #contact-submit { width: 100% !important; }
+          .contact-grid .cyber-card { padding: 1.5rem !important; }
+        }
+        @media(max-width: 480px) {
+          .contact-grid .cyber-card { padding: 1.25rem !important; }
         }
       `}</style>
     </>

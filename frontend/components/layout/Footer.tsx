@@ -280,6 +280,7 @@ export default function Footer() {
 
         {/* Bottom bar */}
         <div
+          className="footer-bottom"
           style={{
             borderTop: "1px solid var(--border)",
             paddingTop: "1.5rem",
@@ -309,6 +310,16 @@ export default function Footer() {
             for Senanayakeans
           </p>
         </div>
+        <style>{`
+          @media (max-width: 768px) {
+            .footer-bottom {
+              flex-direction: column !important;
+              align-items: center !important;
+              text-align: center !important;
+              gap: 0.5rem !important;
+            }
+          }
+        `}</style>
       </div>
     </footer>
   );

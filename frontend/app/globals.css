@@ -490,6 +490,14 @@ h1, h2, h3, h4 {
   padding: 0 2rem;
 }
 
+.page-hero {
+  padding: 8rem 0 4rem;
+  background: var(--black);
+  border-bottom: 1px solid var(--border);
+  position: relative;
+  overflow: hidden;
+}
+
 /* ─────────────────────────────────────────────────────────────────────────── */
 /* ISOMETRIC STACK (retained)                                                   */
 /* ─────────────────────────────────────────────────────────────────────────── */
@@ -555,4 +563,97 @@ h1, h2, h3, h4 {
 .nav-link-wrap:hover .nav-link-active-indicator,
 .nav-link-wrap.active .nav-link-active-indicator {
   width: 70%;
+}
+
+/* ─────────────────────────────────────────────────────────────────────────── */
+/* MOBILE RESPONSIVE                                                            */
+/* ─────────────────────────────────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  /* Container & Section */
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .section {
+    padding: 4rem 0;
+  }
+
+  .page-hero {
+    padding: 6rem 0 2.5rem;
+  }
+
+  /* Typography */
+  h1, h2, h3, h4 {
+    word-break: break-word;
+  }
+
+  /* Buttons — touch friendly */
+  .btn-gold,
+  .btn-outline {
+    min-height: 48px;
+    touch-action: manipulation;
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  .btn-gold:hover,
+  .btn-outline:hover {
+    transform: none;
+  }
+
+  /* Prevent hover card lift on touch */
+  .cyber-card:hover,
+  .glass-card:hover,
+  .glow-card:hover {
+    transform: none;
+  }
+
+  /* Reduce heavy blur on mobile for performance */
+  .glow-spot-gold {
+    width: 300px;
+    height: 300px;
+    filter: blur(50px);
+  }
+
+  .glow-spot-white {
+    width: 200px;
+    height: 200px;
+    filter: blur(40px);
+  }
+
+  /* Inputs — prevent iOS auto-zoom */
+  input,
+  textarea,
+  select {
+    font-size: 16px !important;
+    touch-action: manipulation;
+  }
+
+  /* Section badge */
+  .section-badge {
+    font-size: 0.68rem;
+    padding: 0.3rem 0.85rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 0 0.9rem;
+  }
+
+  .section {
+    padding: 3rem 0;
+  }
+
+  .page-hero {
+    padding: 5.5rem 0 2rem;
+  }
+
+  /* EventCard register button full width on small screens */
+  .event-register-btn {
+    display: block !important;
+    width: 100% !important;
+    text-align: center !important;
+    box-sizing: border-box !important;
+  }
 }

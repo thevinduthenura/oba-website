@@ -77,6 +77,7 @@ export default function BatchIntroSection() {
     >
       {/* Huge background number */}
       <div
+        className="batch-bg-number"
         style={{
           position: "absolute",
           right: "-1rem",
@@ -242,6 +243,10 @@ export default function BatchIntroSection() {
       <style>{`
         @media (max-width: 768px) {
           .timeline-connector { display: none !important; }
+          .batch-bg-number { display: none !important; }
+        }
+        @media (max-width: 480px) {
+          .batch-bg-number { display: none !important; }
         }
       `}</style>
     </section>

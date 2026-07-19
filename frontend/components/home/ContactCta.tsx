@@ -21,7 +21,7 @@ export default function ContactCta() {
     <section
       ref={sectionRef}
       id="contact-cta"
-      className="section"
+      className="section contact-cta-section"
       style={{
         background: "var(--black)",
         borderTop: "1px solid var(--border)",
@@ -49,6 +49,7 @@ export default function ContactCta() {
 
       {/* Rotating ring accent */}
       <div
+        className="cta-ring"
         style={{
           position: "absolute",
           top: "50%",
@@ -63,6 +64,7 @@ export default function ContactCta() {
         }}
       />
       <div
+        className="cta-ring"
         style={{
           position: "absolute",
           top: "50%",
@@ -143,6 +145,7 @@ export default function ContactCta() {
               flexWrap: "wrap",
               marginBottom: "3rem",
             }}
+            className="cta-buttons"
           >
             <Link
               href="/contact"
@@ -222,6 +225,17 @@ export default function ContactCta() {
           </div>
         </div>
       </div>
+      <style>{`
+        @media (max-width: 768px) {
+          .contact-cta-section { padding: 5rem 0 !important; }
+          .cta-ring { display: none !important; }
+          .cta-buttons { flex-direction: column !important; align-items: stretch !important; }
+          .cta-buttons a { text-align: center !important; justify-content: center !important; }
+        }
+        @media (max-width: 480px) {
+          .contact-cta-section { padding: 3.5rem 0 !important; }
+        }
+      `}</style>
     </section>
   );
 }

@@ -249,10 +249,14 @@ export default function AboutSection() {
       <style>{`
         @media (max-width: 991px) {
           .about-header-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
-          .about-cards-grid { grid-template-columns: 1fr !important; }
+          .about-cards-grid  { grid-template-columns: 1fr !important; }
         }
-        @media (max-width: 575px) {
-          .stats-cards-grid { grid-template-columns: 1fr 1fr !important; }
+        @media (max-width: 768px) {
+          .stats-cards-grid { grid-template-columns: 1fr 1fr !important; gap: 0.85rem !important; }
+        }
+        @media (max-width: 480px) {
+          .stats-cards-grid { grid-template-columns: 1fr 1fr !important; gap: 0.65rem !important; }
+          .stats-cards-grid .glow-card { padding: 1.5rem 1rem !important; }
         }
       `}</style>
     </section>

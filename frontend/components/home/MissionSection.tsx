@@ -241,7 +241,11 @@ export default function MissionSection() {
 
       <style>{`
         @media (max-width: 768px) {
-          .mission-grid { grid-template-columns: 1fr !important; }
+          .mission-grid { grid-template-columns: 1fr !important; gap: 1rem !important; }
+          .mission-grid .glass-card { padding: 1.75rem !important; }
+        }
+        @media (max-width: 480px) {
+          .mission-grid .glass-card { padding: 1.5rem 1.1rem !important; }
         }
       `}</style>
     </section>

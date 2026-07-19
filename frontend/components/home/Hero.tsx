@@ -66,7 +66,7 @@ export default function Hero() {
         background: "var(--black)",
         padding: "8rem 0 5rem",
       }}
-      className="tech-grid"
+      className="tech-grid hero-section"
     >
       {/* Ambient dots */}
       {DOTS.map((d, i) => <AmbientDot key={i} {...d} />)}
@@ -238,11 +238,13 @@ export default function Hero() {
                 display: "flex",
                 gap: "1rem",
                 alignItems: "center",
+                flexWrap: "wrap",
                 opacity: mounted ? 1 : 0,
                 transform: mounted ? "translateY(0)" : "translateY(20px)",
                 transition: "opacity 0.7s cubic-bezier(0.16,1,0.3,1), transform 0.7s cubic-bezier(0.16,1,0.3,1)",
                 ...delay(420),
               }}
+              className="hero-ctas"
             >
               <Link href="/committee/office-bearers" className="btn-gold" style={{ padding: "0.65rem 1.6rem" }}>
                 Meet Committee →
@@ -441,8 +443,17 @@ export default function Hero() {
 
       <style>{`
         @media (max-width: 768px) {
+          .hero-section { padding: 5.5rem 0 3.5rem !important; min-height: auto !important; }
           .hero-grid { grid-template-columns: 1fr !important; gap: 2.5rem !important; }
-          .hero-logo-col { display: none !important; }
+          .hero-logo-col { display: flex !important; height: 240px !important; }
+          .hero-logo-col > div { height: 240px !important; }
+          .hero-ctas { flex-direction: column !important; align-items: stretch !important; }
+          .hero-ctas a { text-align: center !important; justify-content: center !important; }
+        }
+        @media (max-width: 480px) {
+          .hero-section { padding: 5rem 0 3rem !important; }
+          .hero-logo-col { height: 200px !important; }
+          .hero-logo-col > div { height: 200px !important; }
         }
       `}</style>
     </section>

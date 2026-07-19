@@ -135,6 +135,7 @@ export default function EventCard({ event }: EventCardProps) {
             href={event.registrationUrl}
             target="_blank"
             rel="noopener noreferrer"
+            className="event-register-btn"
             style={{
               display: "inline-block",
               padding: "0.6rem 1.25rem",
@@ -146,6 +147,8 @@ export default function EventCard({ event }: EventCardProps) {
               textDecoration: "none",
               textAlign: "center",
               transition: "opacity 0.2s",
+              minHeight: "44px",
+              lineHeight: "24px",
             }}
             onMouseEnter={(e) =>
               ((e.currentTarget as HTMLElement).style.opacity = "0.85")
