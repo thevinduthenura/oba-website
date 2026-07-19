@@ -3,6 +3,7 @@ import Hero from "@/components/home/Hero";
 import AboutSection from "@/components/home/AboutSection";
 import BatchIntroSection from "@/components/home/BatchIntroSection";
 import MissionSection from "@/components/home/MissionSection";
+import NewsSection from "@/components/home/NewsSection";
 import ContactCta from "@/components/home/ContactCta";
 import { SITE } from "@/lib/constants";
 
@@ -18,6 +19,7 @@ export default function HomePage() {
       <AboutSection />
       <BatchIntroSection />
       <MissionSection />
+      <NewsSection />
       <ContactCta />
     </>
   );
