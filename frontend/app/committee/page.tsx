@@ -23,14 +23,14 @@ export default function CommitteePage() {
         </div>
       </div>
 
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1.5rem" }} className="committee-nav-grid">
             {[
               {
                 href: "/committee/office-bearers",
                 icon: (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--gold)", margin: "0 auto" }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--gold-dark)", margin: "0 auto" }}>
                     <path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
                     <path d="M22 21v-2a4 4 0 0 0-3-3.87" />
@@ -43,7 +43,7 @@ export default function CommitteePage() {
               {
                 href: "/committee/members",
                 icon: (
-                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--gold)", margin: "0 auto" }}>
+                  <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: "var(--gold-dark)", margin: "0 auto" }}>
                     <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
                     <circle cx="9" cy="7" r="4" />
                     <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
@@ -57,7 +57,7 @@ export default function CommitteePage() {
               <Link key={item.href} href={item.href} className="nav-card" style={{ textDecoration: "none" }}>
                 <div className="cyber-card" style={{ padding: "2.5rem", textAlign: "center" }}>
                   <div style={{ marginBottom: "1rem" }}>{item.icon}</div>
-                  <h2 style={{ fontSize: "1.5rem", color: "var(--gold)", marginBottom: "0.75rem", fontWeight: 700 }}>{item.title}</h2>
+                  <h2 style={{ fontSize: "1.5rem", color: "var(--gold-dark)", marginBottom: "0.75rem", fontWeight: 700 }}>{item.title}</h2>
                   <p style={{ color: "var(--text-secondary)", fontSize: "0.95rem", lineHeight: 1.6 }}>{item.desc}</p>
                 </div>
               </Link>

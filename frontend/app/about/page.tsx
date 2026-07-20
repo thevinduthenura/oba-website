@@ -24,11 +24,11 @@ export default function AboutPage() {
       </div>
 
       {/* Content */}
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "3rem" }} className="about-detail-grid">
             <div>
-              <h2 style={{ fontSize: "1.75rem", color: "var(--gold)", marginBottom: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em" }}>Our History</h2>
+              <h2 style={{ fontSize: "1.75rem", color: "var(--gold-dark)", marginBottom: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em" }}>Our History</h2>
               <p style={{ color: "var(--text-secondary)", lineHeight: 1.9, marginBottom: "1.25rem", fontSize: "1rem" }}>
                 D.S. Senanayake College was established on 10 February 1967 in Cinnamon Gardens, Colombo (adjoining Kinsey Road on what was then Gregory Road, renamed to R. G. Senanayake Mawatha in 2013). Named after the first Prime Minister of independent Sri Lanka, D.S. Senanayake, the school was founded under the leadership of visionary educationist Mr. R. I. T. Alles as its founding principal.
               </p>
@@ -40,7 +40,7 @@ export default function AboutPage() {
               </p>
 
               <div style={{ marginTop: "2.5rem" }}>
-                <h2 style={{ fontSize: "1.75rem", color: "var(--gold)", marginBottom: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em" }}>Our Values</h2>
+                <h2 style={{ fontSize: "1.75rem", color: "var(--gold-dark)", marginBottom: "1.25rem", fontWeight: 800, letterSpacing: "-0.02em" }}>Our Values</h2>
                 <div style={{ display: "grid", gridTemplateColumns: "1fr 1fr", gap: "1rem" }} className="stats-cards-grid">
                   {[
                     { title: "Brotherhood", desc: "Lifelong bonds forged through shared school experiences" },
@@ -49,7 +49,7 @@ export default function AboutPage() {
                     { title: "Unity", desc: "Staying connected regardless of distance or profession" },
                   ].map((v) => (
                     <div key={v.title} className="cyber-card" style={{ padding: "1.5rem" }}>
-                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--gold)", marginBottom: "0.4rem" }}>{v.title}</div>
+                      <div style={{ fontSize: "0.95rem", fontWeight: 700, color: "var(--gold-dark)", marginBottom: "0.4rem" }}>{v.title}</div>
                       <div style={{ fontSize: "0.85rem", color: "var(--text-secondary)", lineHeight: 1.6 }}>{v.desc}</div>
                     </div>
                   ))}

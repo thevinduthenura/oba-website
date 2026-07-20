@@ -55,7 +55,7 @@ export default function MemberTable({ members }: MemberTableProps) {
                   fontSize: "0.8rem",
                   letterSpacing: "0.08em",
                   textTransform: "uppercase",
-                  color: "var(--gold)",
+                  color: "var(--gold-dark)",
                 }}
               >
                 {h}
@@ -69,17 +69,17 @@ export default function MemberTable({ members }: MemberTableProps) {
               key={member.id}
               style={{
                 background:
-                  i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)",
+                  i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)",
                 borderBottom: "1px solid var(--border)",
                 transition: "background 0.15s",
               }}
               onMouseEnter={(e) => {
                 (e.currentTarget as HTMLElement).style.background =
-                  "rgba(201,168,76,0.05)";
+                  "rgba(197,155,39,0.08)";
               }}
               onMouseLeave={(e) => {
                 (e.currentTarget as HTMLElement).style.background =
-                  i % 2 === 0 ? "transparent" : "rgba(255,255,255,0.02)";
+                  i % 2 === 0 ? "transparent" : "rgba(0,0,0,0.02)";
               }}
             >
               <td style={{ padding: "1rem 1.25rem" }}>

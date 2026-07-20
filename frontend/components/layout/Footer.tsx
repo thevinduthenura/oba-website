@@ -10,12 +10,13 @@ export default function Footer() {
   return (
     <footer
       style={{
-        background: "var(--surface)",
-        borderTop: "1px solid var(--border)",
+        background: "var(--black)",
+        borderTop: "1px solid rgba(255, 255, 255, 0.08)",
         padding: "4rem 0 1.75rem",
         marginTop: "auto",
         position: "relative",
         overflow: "hidden",
+        color: "#ffffff",
       }}
     >
       {/* Subtle top animated gradient separator */}
@@ -90,7 +91,7 @@ export default function Footer() {
                 <div
                   style={{
                     fontSize: "0.68rem",
-                    color: "var(--text-muted)",
+                    color: "#a1a1a6",
                     letterSpacing: "0.06em",
                     marginTop: "2px",
                   }}
@@ -102,7 +103,7 @@ export default function Footer() {
             <p
               style={{
                 fontSize: "0.84rem",
-                color: "var(--text-muted)",
+                color: "#a1a1a6",
                 lineHeight: 1.75,
                 maxWidth: "260px",
               }}

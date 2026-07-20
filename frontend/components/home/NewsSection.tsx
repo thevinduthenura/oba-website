@@ -70,13 +70,13 @@ export default function NewsSection() {
       id="news-feed"
       className="section"
       style={{
-        background: "linear-gradient(180deg, var(--surface) 0%, var(--black) 100%)",
+        background: "var(--surface)",
         borderTop: "1px solid var(--border)",
         position: "relative",
         overflow: "hidden",
       }}
     >
-      <div className="glow-spot-gold" style={{ top: "20%", right: "10%", opacity: 0.3 }} />
+      <div className="glow-spot-gold" style={{ top: "20%", right: "10%", opacity: 0.15 }} />
       <div className="glow-spot-white" style={{ bottom: "10%", left: "5%", opacity: 0.2 }} />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>

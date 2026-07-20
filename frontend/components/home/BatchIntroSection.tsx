@@ -68,7 +68,7 @@ export default function BatchIntroSection() {
       id="batch"
       className="section"
       style={{
-        background: "var(--surface)",
+        background: "var(--surface-2)",
         borderTop: "1px solid var(--border)",
         borderBottom: "1px solid var(--border)",
         position: "relative",
@@ -85,7 +85,7 @@ export default function BatchIntroSection() {
           transform: "translateY(-50%)",
           fontSize: "18rem",
           fontWeight: 900,
-          color: "rgba(255, 255, 255, 0.006)",
+          color: "rgba(15, 15, 18, 0.03)",
           lineHeight: 1,
           pointerEvents: "none",
           userSelect: "none",
@@ -96,7 +96,7 @@ export default function BatchIntroSection() {
       </div>
 
       {/* Background glow */}
-      <div className="glow-spot-gold" style={{ bottom: "-20%", left: "-5%", opacity: 0.35 }} />
+      <div className="glow-spot-gold" style={{ bottom: "-20%", left: "-5%", opacity: 0.15 }} />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
 

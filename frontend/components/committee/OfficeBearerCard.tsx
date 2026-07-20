@@ -56,7 +56,7 @@ export default function OfficeBearerCard({ member }: OfficeBearerCardProps) {
           <div
             style={{
               fontSize: "0.8rem",
-              color: "var(--gold)",
+              color: "var(--gold-dark)",
               fontWeight: 600,
               letterSpacing: "0.05em",
               textTransform: "uppercase",

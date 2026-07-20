@@ -20,7 +20,7 @@ export default async function CurrentProjectsPage() {
           <p style={{ fontSize: "1.05rem", color: "var(--text-secondary)", maxWidth: "550px", lineHeight: 1.7 }}>Active initiatives in progress right now.</p>
         </div>
       </div>
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           {projects.length === 0 ? (
             <div className="cyber-card" style={{ textAlign: "center", padding: "5rem 2rem" }}>

@@ -27,7 +27,7 @@ export default async function GalleryPage() {
           </p>
         </div>
       </div>
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           <GalleryGrid images={images} />
         </div>

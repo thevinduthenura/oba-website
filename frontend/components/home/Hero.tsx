@@ -249,7 +249,7 @@ export default function Hero() {
               <Link href="/committee/office-bearers" className="btn-gold" style={{ padding: "0.65rem 1.6rem" }}>
                 Meet Committee →
               </Link>
-              <Link href="/events/upcoming" className="btn-outline" style={{ padding: "0.65rem 1.6rem" }}>
+              <Link href="/events/upcoming" className="btn-outline" style={{ padding: "0.65rem 1.6rem", color: "#ffffff", borderColor: "rgba(255,255,255,0.25)" }}>
                 View Events
               </Link>
             </div>

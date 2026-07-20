@@ -54,14 +54,14 @@ export default function Navbar() {
           zIndex: 1000,
           transition: "all 0.4s cubic-bezier(0.16, 1, 0.3, 1)",
           background: scrolled
-            ? "rgba(5, 5, 5, 0.82)"
-            : "transparent",
-          backdropFilter: scrolled ? "blur(28px) saturate(1.4)" : "none",
-          WebkitBackdropFilter: scrolled ? "blur(28px) saturate(1.4)" : "none",
+            ? "rgba(255, 255, 255, 0.92)"
+            : "rgba(255, 255, 255, 0.75)",
+          backdropFilter: "blur(20px) saturate(1.4)",
+          WebkitBackdropFilter: "blur(20px) saturate(1.4)",
           borderBottom: scrolled
-            ? "1px solid rgba(212, 175, 55, 0.08)"
-            : "1px solid transparent",
-          boxShadow: scrolled ? "0 4px 30px rgba(0,0,0,0.4)" : "none",
+            ? "1px solid rgba(197, 155, 39, 0.15)"
+            : "1px solid rgba(0, 0, 0, 0.05)",
+          boxShadow: scrolled ? "0 4px 20px rgba(0,0,0,0.06)" : "none",
         }}
       >
         {/* Subtle gold shimmer line at top when scrolled */}
@@ -73,7 +73,7 @@ export default function Navbar() {
               left: 0,
               right: 0,
               height: "1px",
-              background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent)",
+              background: "linear-gradient(90deg, transparent, rgba(197,155,39,0.4), transparent)",
               pointerEvents: "none",
             }}
           />
@@ -113,7 +113,7 @@ export default function Navbar() {
                     fontWeight: 800,
                     fontSize: "0.95rem",
                     letterSpacing: "-0.025em",
-                    background: "linear-gradient(135deg, #ffffff 0%, var(--gold-light) 100%)",
+                    background: "linear-gradient(135deg, #0f0f12 0%, var(--gold-dark) 100%)",
                     WebkitBackgroundClip: "text",
                     WebkitTextFillColor: "transparent",
                     backgroundClip: "text",
@@ -125,9 +125,10 @@ export default function Navbar() {
                 <span
                   style={{
                     fontSize: "0.58rem",
-                    color: "var(--text-muted)",
+                    color: "var(--text-secondary)",
                     letterSpacing: "0.1em",
                     textTransform: "uppercase",
+                    fontWeight: 600,
                   }}
                 >
                   Old Boys&apos; Association
@@ -159,14 +160,14 @@ export default function Navbar() {
                           padding: "0.45rem 0.85rem",
                           borderRadius: "0.5rem",
                           fontSize: "0.845rem",
-                          fontWeight: 500,
-                          color: isActive(link.href) ? "#ffffff" : "var(--text-secondary)",
+                          fontWeight: isActive(link.href) ? 700 : 500,
+                          color: isActive(link.href) ? "var(--gold-dark)" : "var(--text-primary)",
                           transition: "all 0.2s",
                           fontFamily: "inherit",
                           position: "relative",
                         }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#ffffff"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = isActive(link.href) ? "#ffffff" : "var(--text-secondary)"; (e.currentTarget as HTMLElement).style.background = "none"; }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--gold-dark)"; (e.currentTarget as HTMLElement).style.background = "rgba(197,155,39,0.08)"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = isActive(link.href) ? "var(--gold-dark)" : "var(--text-primary)"; (e.currentTarget as HTMLElement).style.background = "none"; }}
                       >
                         {link.label}
                         <svg
@@ -174,7 +175,7 @@ export default function Navbar() {
                           viewBox="0 0 12 12"
                           fill="currentColor"
                           style={{
-                            opacity: 0.55,
+                            opacity: 0.75,
                             transform: openDropdown === link.label ? "rotate(180deg)" : "none",
                             transition: "transform 0.25s",
                           }}
@@ -191,17 +192,17 @@ export default function Navbar() {
                             left: "50%",
                             transform: "translateX(-50%)",
                             minWidth: "190px",
-                            background: "rgba(8, 8, 8, 0.96)",
-                            border: "1px solid rgba(212, 175, 55, 0.12)",
+                            background: "#ffffff",
+                            border: "1px solid rgba(197, 155, 39, 0.2)",
                             borderRadius: "0.85rem",
                             padding: "0.5rem",
-                            boxShadow: "0 20px 50px rgba(0,0,0,0.9), 0 0 0 1px rgba(255,255,255,0.03)",
+                            boxShadow: "0 12px 36px rgba(0,0,0,0.12), 0 0 0 1px rgba(0,0,0,0.02)",
                             backdropFilter: "blur(24px)",
                             animation: "fadeUp 0.2s ease",
                           }}
                         >
                           {/* Top gold line */}
-                          <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.3), transparent)", marginBottom: "0.4rem" }} />
+                          <div style={{ height: "1px", background: "linear-gradient(90deg, transparent, rgba(197,155,39,0.4), transparent)", marginBottom: "0.4rem" }} />
                           {link.children.map((child) => (
                             <Link
                               key={child.href}
@@ -214,13 +215,13 @@ export default function Navbar() {
                                 borderRadius: "0.5rem",
                                 fontSize: "0.82rem",
                                 fontWeight: 500,
-                                color: isActive(child.href) ? "var(--gold)" : "var(--text-secondary)",
+                                color: isActive(child.href) ? "var(--gold-dark)" : "var(--text-primary)",
                                 textDecoration: "none",
                                 transition: "all 0.15s",
-                                background: isActive(child.href) ? "rgba(212,175,55,0.07)" : "transparent",
+                                background: isActive(child.href) ? "rgba(197,155,39,0.1)" : "transparent",
                               }}
-                              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.05)"; (e.currentTarget as HTMLElement).style.color = "#ffffff"; }}
-                              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = isActive(child.href) ? "rgba(212,175,55,0.07)" : "transparent"; (e.currentTarget as HTMLElement).style.color = isActive(child.href) ? "var(--gold)" : "var(--text-secondary)"; }}
+                              onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.background = "rgba(197,155,39,0.08)"; (e.currentTarget as HTMLElement).style.color = "var(--gold-dark)"; }}
+                              onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.background = isActive(child.href) ? "rgba(197,155,39,0.1)" : "transparent"; (e.currentTarget as HTMLElement).style.color = isActive(child.href) ? "var(--gold-dark)" : "var(--text-primary)"; }}
                             >
                               {isActive(child.href) && (
                                 <span style={{ width: 4, height: 4, borderRadius: "50%", background: "var(--gold)", display: "inline-block", flexShrink: 0 }} />
@@ -240,14 +241,14 @@ export default function Navbar() {
                           padding: "0.45rem 0.85rem",
                           borderRadius: "0.5rem",
                           fontSize: "0.845rem",
-                          fontWeight: isActive(link.href) ? 600 : 500,
-                          color: isActive(link.href) ? "#ffffff" : "var(--text-secondary)",
+                          fontWeight: isActive(link.href) ? 700 : 500,
+                          color: isActive(link.href) ? "var(--gold-dark)" : "var(--text-primary)",
                           textDecoration: "none",
                           transition: "all 0.2s",
                           position: "relative",
                         }}
-                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "#ffffff"; (e.currentTarget as HTMLElement).style.background = "rgba(255,255,255,0.04)"; }}
-                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = isActive(link.href) ? "#ffffff" : "var(--text-secondary)"; (e.currentTarget as HTMLElement).style.background = "none"; }}
+                        onMouseEnter={(e) => { (e.currentTarget as HTMLElement).style.color = "var(--gold-dark)"; (e.currentTarget as HTMLElement).style.background = "rgba(197,155,39,0.08)"; }}
+                        onMouseLeave={(e) => { (e.currentTarget as HTMLElement).style.color = isActive(link.href) ? "var(--gold-dark)" : "var(--text-primary)"; (e.currentTarget as HTMLElement).style.background = "none"; }}
                       >
                         {link.label}
                       </Link>
@@ -261,7 +262,7 @@ export default function Navbar() {
                             transform: "translateX(-50%)",
                             width: "18px",
                             height: "2px",
-                            background: "linear-gradient(90deg, var(--gold-vivid), var(--gold))",
+                            background: "linear-gradient(90deg, var(--gold-vivid), var(--gold-dark))",
                             borderRadius: "2px",
                             animation: "lineExpand 0.4s cubic-bezier(0.16,1,0.3,1) both",
                           }}
@@ -292,8 +293,8 @@ export default function Navbar() {
               onClick={() => setMobileOpen(!mobileOpen)}
               className="show-mobile"
               style={{
-                background: mobileOpen ? "rgba(212,175,55,0.08)" : "none",
-                border: `1px solid ${mobileOpen ? "rgba(212,175,55,0.3)" : "var(--border)"}`,
+                background: mobileOpen ? "rgba(197,155,39,0.1)" : "none",
+                border: `1px solid ${mobileOpen ? "rgba(197,155,39,0.4)" : "var(--border)"}`,
                 borderRadius: "0.6rem",
                 cursor: "pointer",
                 padding: "0.5rem",
@@ -316,7 +317,7 @@ export default function Navbar() {
                     display: "block",
                     width: "20px",
                     height: "2px",
-                    background: mobileOpen ? "var(--gold-vivid)" : "var(--gold)",
+                    background: mobileOpen ? "var(--gold-vivid)" : "#0f0f12",
                     borderRadius: "2px",
                     transition: "all 0.3s cubic-bezier(0.16,1,0.3,1)",
                     transform:
@@ -341,13 +342,13 @@ export default function Navbar() {
             left: 0,
             right: 0,
             bottom: 0,
-            background: "rgba(5,5,5,0.97)",
+            background: "rgba(255, 255, 255, 0.98)",
             zIndex: 999,
             padding: "1.5rem",
             overflowY: "auto",
             backdropFilter: "blur(24px)",
             animation: "fadeIn 0.2s ease",
-            borderTop: "1px solid rgba(212,175,55,0.1)",
+            borderTop: "1px solid rgba(197,155,39,0.2)",
           }}
         >
           {/* Gold line at top */}
@@ -360,12 +361,12 @@ export default function Navbar() {
                 style={{
                   display: "block",
                   padding: "0.9rem 1rem",
-                  color: isActive(link.href) ? "var(--gold)" : "var(--text-primary)",
+                  color: isActive(link.href) ? "var(--gold-dark)" : "var(--text-primary)",
                   textDecoration: "none",
                   fontSize: "1rem",
                   fontWeight: 600,
                   borderRadius: "0.65rem",
-                  background: isActive(link.href) ? "rgba(212,175,55,0.08)" : "transparent",
+                  background: isActive(link.href) ? "rgba(197,155,39,0.1)" : "transparent",
                   borderLeft: isActive(link.href) ? "3px solid var(--gold)" : "3px solid transparent",
                   transition: "all 0.2s",
                   minHeight: "48px",
@@ -386,12 +387,12 @@ export default function Navbar() {
                         alignItems: "center",
                         gap: "0.4rem",
                         padding: "0.6rem 1rem",
-                        color: isActive(child.href) ? "var(--gold-light)" : "var(--text-muted)",
+                        color: isActive(child.href) ? "var(--gold-dark)" : "var(--text-secondary)",
                         textDecoration: "none",
                         fontSize: "0.9rem",
                         fontWeight: 500,
                         borderRadius: "0.5rem",
-                        background: isActive(child.href) ? "rgba(212,175,55,0.06)" : "transparent",
+                        background: isActive(child.href) ? "rgba(197,155,39,0.08)" : "transparent",
                         minHeight: "44px",
                         touchAction: "manipulation",
                         WebkitTapHighlightColor: "transparent",

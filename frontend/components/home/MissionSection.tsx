@@ -69,8 +69,9 @@ export default function MissionSection() {
       id="mission"
       className="section"
       style={{
-        background: "linear-gradient(180deg, var(--black) 0%, var(--surface) 100%)",
-        borderTop: "1px solid var(--border)",
+        background: "var(--black)",
+        borderTop: "1px solid rgba(255, 255, 255, 0.08)",
+        borderBottom: "1px solid rgba(255, 255, 255, 0.08)",
         position: "relative",
         overflow: "hidden",
       }}
@@ -97,7 +98,7 @@ export default function MissionSection() {
             style={{
               fontSize: "clamp(1.8rem, 3vw, 2.75rem)",
               fontWeight: 800,
-              color: "var(--text-primary)",
+              color: "#ffffff",
               letterSpacing: "-0.035em",
               marginTop: "0.85rem",
             }}
@@ -124,12 +125,12 @@ export default function MissionSection() {
               gap: "0.5rem",
               marginTop: "1.25rem",
               padding: "0.45rem 1.1rem",
-              background: "rgba(212, 175, 55, 0.06)",
-              border: "1px solid rgba(212, 175, 55, 0.2)",
+              background: "rgba(197, 155, 39, 0.12)",
+              border: "1px solid rgba(197, 155, 39, 0.3)",
               borderRadius: "2rem",
               fontSize: "0.82rem",
               fontWeight: 600,
-              color: "var(--gold)",
+              color: "var(--gold-light)",
             }}
           >
             <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
@@ -147,7 +148,7 @@ export default function MissionSection() {
           {cards.map((card) => (
             <div
               key={card.title}
-              className="glass-card"
+              className="dark-card"
               style={{
                 padding: "2.5rem",
                 opacity: visible ? 1 : 0,
@@ -161,23 +162,23 @@ export default function MissionSection() {
                   width: "56px",
                   height: "56px",
                   borderRadius: "0.9rem",
-                  background: "rgba(212,175,55,0.07)",
-                  border: "1px solid rgba(212,175,55,0.2)",
+                  background: "rgba(197,155,39,0.12)",
+                  border: "1px solid rgba(197,155,39,0.3)",
                   display: "flex",
                   alignItems: "center",
                   justifyContent: "center",
                   marginBottom: "1.5rem",
-                  color: "var(--gold)",
-                  boxShadow: "0 0 20px rgba(212,175,55,0.08)",
+                  color: "var(--gold-vivid)",
+                  boxShadow: "0 0 20px rgba(197,155,39,0.15)",
                   transition: "box-shadow 0.3s, border-color 0.3s",
                 }}
                 onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px rgba(212,175,55,0.25)";
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(212,175,55,0.5)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 30px rgba(197,155,39,0.35)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(197,155,39,0.6)";
                 }}
                 onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(212,175,55,0.08)";
-                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(212,175,55,0.2)";
+                  (e.currentTarget as HTMLElement).style.boxShadow = "0 0 20px rgba(197,155,39,0.15)";
+                  (e.currentTarget as HTMLElement).style.borderColor = "rgba(197,155,39,0.3)";
                 }}
               >
                 {card.icon}
@@ -193,7 +194,7 @@ export default function MissionSection() {
               >
                 {card.title}
               </h3>
-              <p style={{ color: "var(--text-secondary)", lineHeight: 1.8, fontSize: "0.95rem" }}>
+              <p style={{ color: "#a1a1a6", lineHeight: 1.8, fontSize: "0.95rem" }}>
                 {card.body}
               </p>
             </div>

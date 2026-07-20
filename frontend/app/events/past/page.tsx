@@ -27,7 +27,7 @@ export default async function PastEventsPage() {
           </p>
         </div>
       </div>
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           {events.length === 0 ? (
             <div className="cyber-card" style={{ textAlign: "center", padding: "5rem 2rem" }}>

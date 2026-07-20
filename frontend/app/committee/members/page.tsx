@@ -30,7 +30,7 @@ export default async function MembersPage() {
         </div>
       </div>
 
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           <div className="cyber-card" style={{ overflow: "hidden" }}>
             <MemberTable members={members} />

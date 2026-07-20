@@ -44,7 +44,7 @@ function StatCard({
           fontWeight: 800,
           letterSpacing: "-0.04em",
           marginBottom: "0.2rem",
-          background: "linear-gradient(135deg, #ffffff 0%, var(--gold-light) 70%)",
+          background: "linear-gradient(135deg, var(--gold-vivid) 0%, var(--gold-dark) 100%)",
           WebkitBackgroundClip: "text",
           WebkitTextFillColor: "transparent",
           backgroundClip: "text",
@@ -52,10 +52,10 @@ function StatCard({
       >
         {count}{suffix}
       </div>
-      <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--gold)", marginBottom: "0.45rem" }}>
+      <div style={{ fontSize: "0.88rem", fontWeight: 700, color: "var(--gold-dark)", marginBottom: "0.45rem" }}>
         {label}
       </div>
-      <p style={{ fontSize: "0.78rem", color: "var(--text-muted)", lineHeight: 1.55 }}>{desc}</p>
+      <p style={{ fontSize: "0.78rem", color: "var(--text-secondary)", lineHeight: 1.55 }}>{desc}</p>
     </div>
   );
 }
@@ -79,14 +79,14 @@ export default function AboutSection() {
       id="about"
       className="section"
       style={{
-        background: "var(--black)",
-        borderTop: "1px solid rgba(255,255,255,0.04)",
+        background: "var(--surface)",
+        borderTop: "1px solid var(--border)",
         position: "relative",
         overflow: "hidden",
       }}
     >
       {/* Subtle glow */}
-      <div className="glow-spot-gold" style={{ top: "30%", right: "-15%", opacity: 0.5 }} />
+      <div className="glow-spot-gold" style={{ top: "30%", right: "-15%", opacity: 0.2 }} />
 
       <div className="container" style={{ position: "relative", zIndex: 1 }}>
         {/* Header row */}
@@ -111,7 +111,7 @@ export default function AboutSection() {
               style={{
                 fontSize: "clamp(2rem, 4vw, 3rem)",
                 fontWeight: 800,
-                color: "#ffffff",
+                color: "var(--text-primary)",
                 letterSpacing: "-0.035em",
                 marginTop: "0.75rem",
               }}
@@ -176,7 +176,7 @@ export default function AboutSection() {
                 position: "absolute",
                 top: 0, left: "20%", right: "20%",
                 height: "1px",
-                background: "linear-gradient(90deg, transparent, rgba(212,175,55,0.4), transparent)",
+                background: "linear-gradient(90deg, transparent, rgba(197,155,39,0.4), transparent)",
               }}
             />
 
@@ -185,7 +185,7 @@ export default function AboutSection() {
                 style={{
                   fontSize: "1.8rem",
                   fontWeight: 800,
-                  color: "#ffffff",
+                  color: "var(--text-primary)",
                   letterSpacing: "-0.025em",
                 }}
               >

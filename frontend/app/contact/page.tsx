@@ -66,13 +66,13 @@ export default function ContactPage() {
         </div>
       </div>
 
-      <section className="section" style={{ background: "var(--black)" }}>
+      <section className="section" style={{ background: "var(--surface)" }}>
         <div className="container">
           <div style={{ display: "grid", gridTemplateColumns: "1fr 1.5fr", gap: "3rem", alignItems: "start" }} className="contact-grid">
             {/* Left: Info */}
             <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
               <div className="cyber-card" style={{ padding: "2rem" }}>
-                <h2 style={{ fontSize: "1.3rem", color: "var(--gold)", marginBottom: "1.25rem", fontWeight: 800 }}>Get in Touch</h2>
+                <h2 style={{ fontSize: "1.3rem", color: "var(--gold-dark)", marginBottom: "1.25rem", fontWeight: 800 }}>Get in Touch</h2>
                 {[
                   {
                     icon: (
